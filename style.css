@@ -8,6 +8,10 @@ section {
     justify-content: center;
 
     background-image:linear-gradient(120deg, #97ebd6, #9aa6f9);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
 }
 
 section img {
