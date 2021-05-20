@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Messapia';
+    src: url('/assets/messapia-bold.woff2');
+}
+
 @keyframes show {
     0%{
         opacity: 0;
@@ -8,8 +13,18 @@
     100%{
         opacity:1;
         transform:translate(0, 0) scale(1);
-        clip-path:polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+        
     }
+}
+
+body {
+    font-family: 'Messapia';
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    background-color: #ffffff;
+    color: #333333;
 }
 
 section {
@@ -23,9 +38,9 @@ section {
     position: sticky;
 }
 
-
 section.alternate {
     background-image:linear-gradient(30deg, #dc72ef, #fe0000);
+    color:black;
 }
 
 figure {
@@ -34,21 +49,34 @@ figure {
     width:100%;
     height:100%;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     clip-path:polygon(0% 0%,100% 0%, 100% 100%, 0% 100%);
+
+    perspective: 800px;
+}
+
+figure div {
+    height: 100%;
+    transform: rotateX(20deg) rotateY(20deg);
 }
 
 figure img {
-    max-height:100%;
+    max-height:90%;
+     
 }
 
 figcaption {
     position: fixed;
     top: 70%;
     left:50%;
+    width: 90%;
     color:white;
     transform: translate(-50%, -50%);
     pointer-events: none;
+}
+
+section.alternate figcaption {
+    color:black;
 }
 
 h1 {
