@@ -14,4 +14,19 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => {
     observer.observe(section)
+
+    const div = section.querySelector('div')
+    const mq = window.matchMedia("(prefers-reduced-motion: no-preference) ")
+
+    if(mq.matches){
+
+        document.addEventListener('mousemove', function(event){
+            const aimX = (event.pageX - (window.innerWidth / 2)) / 20
+            const aimY = (event.pageY - (window.innerHeight /2)) / -20
+            div.style.transform = `rotateX(${aimY}deg) rotateY(${aimX}deg)`
+        })
+
+    }
+
+    
 })

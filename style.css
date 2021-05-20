@@ -17,6 +17,11 @@
     }
 }
 
+
+
+
+
+
 body {
     font-family: 'Messapia';
     font-size: 10px;
@@ -57,7 +62,6 @@ figure {
 
 figure div {
     height: 100%;
-    transform: rotateX(20deg) rotateY(20deg);
 }
 
 figure img {
@@ -88,14 +92,18 @@ p {
     font-size: 64px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+
+
+@media(prefers-reduced-motion: no-preference) {
 
     section.in-view img {
         animation: show 3s 0.4s both cubic-bezier(0.68,-0.55,0.27,1.55); 
      }
+
+    
 }
 
-@media (prefers-reduced-motion: no-preference) and (min-width:1000px) {
+@media(prefers-reduced-motion: no-preference) and (min-width:1000px) {
 
     html, body {
         height:100%;
